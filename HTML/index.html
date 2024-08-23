@@ -1,0 +1,198 @@
+<html>
+  <head>
+    <title>Google</title>
+    <link
+      rel="icon"
+      href="https://static.vecteezy.com/system/resources/previews/022/613/027/non_2x/google-icon-logo-symbol-free-png.png"
+    />
+  </head>
+
+  <body>
+    <h1>Hello HTML</h1>
+    <h2>Hello HTML</h2>
+    <h3>Hello HTML</h3>
+    <h4>Hello HTML</h4>
+    <h5>Hello HTML</h5>
+    <h6>Hello HTML</h6>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </p>
+
+    <span
+      ><b title="Hello☻">Lorem</b> <em>Ipsum</em> <i>has</i> <mark>been</mark>
+      <u>the</u> <s>industry's</s> <code>standard</code> dummy text ever since
+      the 1500s, when an unknown printer took a galley of type and scrambled it
+      to make a type specimen book. <br />
+      It has survived not only five centuries, but also the leap into electronic
+      typesetting, remaining essentially unchanged. It was popularised in the
+      1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum.</span
+    >
+    <span>Hi</span>
+    <pre>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      Suscipit quo, magnam ut tempora porro explicabo pariatur, 
+      minus voluptate nostrum fugit tempore. Sed autem quasi ratione 
+      doloribus cumque, iure harum officiis.
+    </pre>
+
+    <abbr title="World Health Organization">WHO</abbr>
+
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Google_Assistant_logo.png/481px-Google_Assistant_logo.png"
+    />
+
+    <hr />
+
+    <h1>Unorder List</h1>
+
+    <ul type="circle">
+      <li>Apple</li>
+      <li>Cherry</li>
+    </ul>
+
+    <h1>Order List</h1>
+    <ol type="i" reversed>
+      <li>Cherry</li>
+      <li>Orange</li>
+      <li>Apple</li>
+      <li>Cherry</li>
+    </ol>
+
+    <h1>Nested order/unorder List</h1>
+
+    <ol>
+      <li>
+        Fruits
+        <ul type="square">
+          <li type="circle">
+            apple
+            <ol>
+              <li>green apple</li>
+              <li>red apple</li>
+            </ol>
+          </li>
+          <li>cherry</li>
+          <li>orange</li>
+        </ul>
+      </li>
+      <li>Vegetables</li>
+    </ol>
+
+    <table border="1px">
+      <tr>
+        <th>Row1 Cell1</th>
+        <th>Row1 Cell2</th>
+        <th>Row1 Cell3</th>
+      </tr>
+      <tr>
+        <th>Row2 Cell1</th>
+        <th>Row2 Cell2</th>
+        <th>Row2 Cell3</th>
+      </tr>
+      <tr>
+        <th>Row3 Cell1</th>
+        <th>Row3 Cell2</th>
+        <th>Row3 Cell3</th>
+      </tr>
+      <tr>
+        <th>Row4 Cell1</th>
+        <th>Row4 Cell2</th>
+        <th>Row4 Cell3</th>
+      </tr>
+    </table>
+
+    <br />
+
+    <table border="1px">
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Row 1 Cell 1</td>
+        <td>Row 1 Cell 2</td>
+        <td>Row 1 Cell 3</td>
+      </tr>
+
+      <tr>
+        <td>Row 2 Cell 2</td>
+        <td>Row 2 Cell 3</td>
+      </tr>
+
+      <tr>
+        <td colspan="3">Row 3 Cell 1</td>
+      </tr>
+    </table>
+    <hr />
+
+    <h1>Form</h1>
+    <form>
+      <label for="fullname">Fullname</label>
+      <br />
+      <input
+        type="text"
+        id="fullname"
+        placeholder="Enter your fullname"
+        required
+      />
+      <br /><br />
+      <label for="email">Email</label>
+      <br />
+      <input type="email" id="email" required />
+      <br /><br />
+      <label for="password">Password</label>
+      <br />
+      <input type="password" id="password" required />
+      <br /><br />
+      <input type="date" />
+      <br /><br />
+      <input type="datetime-local" />
+      <br /><br />
+
+      <h1>Gender</h1>
+      <input type="radio" id="male" name="gender" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" />
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" />
+      <label for="other">Other</label>
+
+      <h1>Known Skills</h1>
+      <input type="checkbox" id="html" />
+      <label for="html">HTML</label>
+      <input type="checkbox" id="css" />
+      <label for="css">CSS</label>
+      <input type="checkbox" id="js" />
+      <label for="js">JS</label>
+
+      <br />
+
+      <h1>Tell about yourself</h1>
+      <textarea cols="25" rows="10"></textarea>
+
+      <button>Submit</button>
+      <input type="button" value="reset" />
+
+      <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+
+      <br /><br />
+    </form>
+  </body>
+</html>
