@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .descendant p {
+        color: brown;
+      }
+
+      .child > p {
+        color: brown;
+      }
+
+      .adjacent-sibling + p + p {
+        color: brown;
+      }
+
+      .general-sibling ~ p {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>descendant selector</h2>
+    <article class="descendant">
+      <div>
+        <section><p>inside div - indirect child</p></section>
+      </div>
+      <p>outside div - direct child</p>
+    </article>
+
+    <hr />
+
+    <p>outside article</p>
+
+    <h2>child selector</h2>
+    <article class="child">
+      <p>outside div - direct child</p>
+      <div>
+        <section><p>inside div - indirect child</p></section>
+      </div>
+      <p>outside div - direct child</p>
+    </article>
+
+    <p>outside article</p>
+
+    <hr />
+
+    <p>outside article</p>
+
+    <h2>adjacent-sibling selector</h2>
+    <article class="adjacent-sibling">
+      <p>outside div - direct child</p>
+      <div>
+        <section><p>inside div - indirect child</p></section>
+      </div>
+      <p>outside div - direct child</p>
+    </article>
+
+    <p>outside article</p>
+    <p>outside article</p>
+
+    <hr />
+
+    <p>outside article</p>
+
+    <h2>general-sibling selector</h2>
+    <article class="general-sibling">
+      <p>outside div - direct child</p>
+      <div>
+        <section><p>inside div - indirect child</p></section>
+      </div>
+      <p>outside div - direct child</p>
+    </article>
+
+    <p>outside article</p>
+    <h1>outside article</h1>
+    <p>outside article</p>
+  </body>
+</html>
