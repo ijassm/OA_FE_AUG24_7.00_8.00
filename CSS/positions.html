@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+        background-color: black;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+      }
+
+      .static {
+        position: static;
+        background-color: aqua;
+        top: 200px;
+        left: 200px;
+      }
+
+      .relative1 {
+        position: relative;
+        background-color: yellow;
+        /* z-index: 1; */
+        /* top: -100px;
+        left: 50px; */
+      }
+
+      .relative2 {
+        position: relative;
+        background-color: chartreuse;
+        right: 0px;
+        top: 0px;
+        /* top: -150px; */
+        /* z-index: -1; */
+        /* left: 100px; */
+      }
+
+      .absolute {
+        position: absolute;
+        background-color: rgb(255, 0, 140);
+        /* top: -150px; */
+        /* z-index: -1; */
+        left: 50%;
+        top: 50%;
+        translate: -50px -50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box static"></div>
+    <div class="box relative1"></div>
+    <div class="box relative2"></div>
+    <div class="box static"></div>
+    <div class="box absolute"></div>
+    <div class="box static"></div>
+  </body>
+</html>
