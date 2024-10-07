@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card-Design</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        font-family: "Poppins", system-ui;
+      }
+
+      body {
+        background-color: rgb(226, 226, 226);
+        margin: 0%;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .max-width {
+        max-width: 1300px;
+        width: 95%;
+        margin-inline: auto;
+      }
+
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      nav {
+        background-color: white;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 10px;
+      }
+
+      .navbar .logo {
+        max-width: 100px;
+      }
+
+      .routes {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        font-weight: 500;
+      }
+
+      .routes > a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .routes > a:hover {
+        color: green;
+      }
+
+      .login-btn,
+      .menu {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .login-btn:hover {
+        background-color: #006e04;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .flex-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .flex-item {
+        flex-basis: calc(100% / 4 - 20px);
+        /* flex-grow: 1; */
+        /* max-width: 400px; */
+        background-color: white;
+      }
+
+      .flex-item:hover {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.525);
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .description {
+        display: -webkit-box;
+        line-clamp: 4;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .flex-item .btn {
+        background-color: rgba(0, 0, 0, 0.743);
+        color: white;
+        padding-block: 10px;
+        cursor: pointer;
+      }
+
+      .flex-item .btn:hover {
+        font-weight: bold;
+        background-color: black;
+      }
+
+      @media (max-width: 1000px) {
+        .flex-item {
+          flex-basis: calc(100% / 2 - 20px);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .navbar .menu {
+          display: block;
+        }
+
+        .navbar .routes {
+          display: none;
+        }
+
+        .flex-item {
+          flex-basis: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar max-width">
+        <img
+          class="logo"
+          src="https://1000logos.net/wp-content/uploads/2017/05/Pepsi-logo.png"
+          alt="logo"
+        />
+        <div class="routes">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <div class="login-btn">Login</div>
+        </div>
+        <div class="menu">Menu</div>
+      </div>
+    </nav>
+    <header class="max-width">
+      <h1>Card-Design</h1>
+    </header>
+    <main class="flex-container max-width">
+      <section class="flex-item">
+        <img
+          src="https://gratisography.com/wp-content/uploads/2024/03/gratisography-vr-glasses-800x525.jpg"
+          alt="img"
+        />
+        <div class="content">
+          <p class="title">Title</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus voluptatem rem blanditiis iste optio nemo nostrum
+            autem modi, praesentium minus tenetur dolores officiis qui aliquam
+            repudiandae error rerum numquam quidem.
+          </p>
+          <div class="btn center">View</div>
+        </div>
+      </section>
+      <section class="flex-item">
+        <img
+          src="https://gratisography.com/wp-content/uploads/2024/03/gratisography-vr-glasses-800x525.jpg"
+          alt="img"
+        />
+        <div class="content">
+          <p class="title">Title</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus voluptatem rem blanditiis iste optio nemo nostrum
+            autem modi, praesentium minus tenetur dolores officiis qui aliquam
+            repudiandae error rerum numquam quidem.
+          </p>
+          <div class="btn center">View</div>
+        </div>
+      </section>
+      <section class="flex-item">
+        <img
+          src="https://gratisography.com/wp-content/uploads/2024/03/gratisography-vr-glasses-800x525.jpg"
+          alt="img"
+        />
+        <div class="content">
+          <p class="title">Title</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus voluptatem rem blanditiis iste optio nemo nostrum
+            autem modi, praesentium minus tenetur dolores officiis qui aliquam
+            repudiandae error rerum numquam quidem.
+          </p>
+          <div class="btn center">View</div>
+        </div>
+      </section>
+      <section class="flex-item">
+        <img
+          src="https://gratisography.com/wp-content/uploads/2024/03/gratisography-vr-glasses-800x525.jpg"
+          alt="img"
+        />
+        <div class="content">
+          <p class="title">Title</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus voluptatem rem blanditiis iste optio nemo nostrum
+            autem modi, praesentium minus tenetur dolores officiis qui aliquam
+            repudiandae error rerum numquam quidem.
+          </p>
+          <div class="btn center">View</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
