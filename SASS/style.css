@@ -1,0 +1,26 @@
+.center, .box1 .box2, .box1, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0%;
+}
+
+.box1 {
+  height: 300px;
+  width: 300px;
+  background-color: red;
+}
+.box1 .box2 {
+  height: 200px;
+  width: 200px;
+  background-color: rgb(26, 255, 0);
+}
+.box1 .box2 .box3 {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 94, 0);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,35 @@
+$color1: red;
+$color2: rgb(26, 255, 0);
+$color3: rgb(255, 94, 0);
+
+@mixin box($h, $w, $bg) {
+  height: $h;
+  width: $w;
+  background-color: $bg;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  @extend .center;
+  min-height: 100vh;
+  margin: 0%;
+}
+
+.box1 {
+  @include box(300px, 300px, $color1);
+  @extend .center;
+
+  .box2 {
+    @include box(200px, 200px, $color2);
+    @extend .center;
+
+    .box3 {
+      @include box(100px, 100px, $color3);
+    }
+  }
+}
