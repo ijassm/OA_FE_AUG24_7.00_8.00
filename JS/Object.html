@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const obj = new Object({
+      //     name: "xyz",
+      //   });
+
+      //   const obj = {
+      //     name: "xyz",
+      //     age: 25,
+      //     location: "pondy",
+      //   };
+
+      //   console.log(obj.name);
+      //   console.log(obj["name"]);
+
+      //   console.log(typeof obj);
+
+      //   iterate
+
+      //   for (let i in obj) {
+      //     console.log(`${i} :`, obj[i]);
+      //   }
+
+      let persons = [
+        {
+          name: "xyz",
+          age: 25,
+          location: "pondy",
+        },
+        {
+          name: "abc",
+          age: 30,
+          location: "chennai",
+        },
+        {
+          name: "def",
+          age: 35,
+          location: "bangalore",
+        },
+      ];
+
+      for (let i of persons) {
+        // console.log(i);
+
+        console.log(`Name: ${i.name}`);
+        console.log(`Age: ${i.age}`);
+        console.log(`Location: ${i.location}`);
+        console.log("\n");
+      }
+
+      //   prototype
+
+      //   console.log(String.prototype);
+      //   console.log(Number.prototype);
+      //   console.log(Boolean.prototype);
+    //   console.log(Array.prototype);
+      //   console.log(Object.prototype);
+    </script>
+  </body>
+</html>
