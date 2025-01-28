@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const a = [1, 2, 3, 4, 5];
+      const b = [16, 24, 13, 14, 35];
+
+      function double(array) {
+        const result = [];
+        for (let i = 0; i < array.length; i++) {
+          result.push(array[i] * 2);
+        }
+        return result;
+      }
+
+      function triple(array) {
+        const result = [];
+        for (let i = 0; i < array.length; i++) {
+          result.push(array[i] * 3);
+        }
+        return result;
+      }
+
+      function quadruple(array) {
+        const result = [];
+        for (let i = 0; i < array.length; i++) {
+          result.push(array[i] * 4);
+        }
+        return result;
+      }
+
+      function map(array, logicFunc) {
+        const result = [];
+        for (let i = 0; i < array.length; i++) {
+          const value = logicFunc(array[i], i, array);
+          result.push(value);
+        }
+        return result;
+      }
+
+      //   console.log(double(a));
+      //   console.log(double(b));
+      //   console.log(triple(a));
+      //   console.log(triple(b));
+      //   console.log(quadruple(a));
+      //   console.log(quadruple(b));
+
+      //   function double(value, index, array) {
+      //     return value * 2;
+      //   }
+      //   function triple(value, index, array) {
+      //     return value * 3;
+      //   }
+
+      //   console.log(map(a, double));
+      //   console.log(map(a, triple));
+
+      double = map(a, (value) => value * 2);
+      triple = map(a, (value) => value * 3);
+      quadruple = map(a, (value) => value * 4);
+
+      console.log(double);
+      console.log(triple);
+      console.log(quadruple);
+      console.log(a.map((value) => value * 4));
+    </script>
+  </body>
+</html>
