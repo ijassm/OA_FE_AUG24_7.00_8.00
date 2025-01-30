@@ -60,14 +60,53 @@
       //   console.log(map(a, double));
       //   console.log(map(a, triple));
 
-      double = map(a, (value) => value * 2);
-      triple = map(a, (value) => value * 3);
-      quadruple = map(a, (value) => value * 4);
+      // double = map(a, (value) => value * 2);
+      // triple = map(a, (value) => value * 3);
+      // quadruple = map(a, (value) => value * 4);
 
-      console.log(double);
-      console.log(triple);
-      console.log(quadruple);
-      console.log(a.map((value) => value * 4));
+      // console.log(double);
+      // console.log(triple);
+      // console.log(quadruple);
+      // console.log(a.map((value) => value * 4));
+
+      // function filter(array, logicFunc) {
+      //   const result = [];
+      //   for (let i = 0; i < array.length; i++) {
+      //     const condition = logicFunc(array[i], i, array); //return true/false
+      //     if (condition) result.push(array[i]);
+      //   }
+      //   return result;
+      // }
+
+      // const c = a.filter((value) => value % 2 == 0);
+      // const d = filter(a, (value) => value % 2 == 0);
+
+      // console.log(c);
+      // console.log(d);
+
+      // function reduce(array, logicFunc, accumulator = 0) {
+      //   for (let i = 0; i < array.length; i++) {
+      //     accumulator = logicFunc(accumulator, array[i], i, array);
+      //   }
+      //   return accumulator;
+      // }
+
+      // const sum1 = reduce(a, (acc, value) => acc + value);
+      // const sum2 = a.reduce((acc, value) => acc + value);
+
+      // console.log(sum1);
+      // console.log(sum2);
+
+      function reduce(logicFunc, accumulator = 0) {
+        for (let i = 0; i < this.length; i++) {
+          accumulator = logicFunc(accumulator, this[i], i, this);
+        }
+        return accumulator;
+      }
+
+      Array.prototype.myReduce = reduce;
+
+      console.log(a.myReduce((acc, value) => acc + value));
     </script>
   </body>
 </html>
