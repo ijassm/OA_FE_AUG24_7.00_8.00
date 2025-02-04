@@ -97,8 +97,14 @@
       // console.log(sum1);
       // console.log(sum2);
 
-      function reduce(logicFunc, accumulator = 0) {
-        for (let i = 0; i < this.length; i++) {
+      function reduce(logicFunc, accumulator) {
+        let startIndex = 0;
+        if (accumulator == undefined) {
+          accumulator = this[0];
+          startIndex = 1;
+        }
+
+        for (let i = startIndex; i < this.length; i++) {
           accumulator = logicFunc(accumulator, this[i], i, this);
         }
         return accumulator;
@@ -106,7 +112,14 @@
 
       Array.prototype.myReduce = reduce;
 
-      console.log(a.myReduce((acc, value) => acc + value));
+      const str = ["a", "b", "c", "d", "e"];
+
+      console.log(str.__proto__.__proto__);
+
+      // console.log(a.myReduce((acc, value) => acc + value, 1));
+      // console.log(a.reduce((acc, value) => acc + value, 1));
+      console.log(str.myReduce((acc, value) => acc + value, 1));
+      console.log(str.reduce((acc, value) => acc + value, 1));
     </script>
   </body>
 </html>
