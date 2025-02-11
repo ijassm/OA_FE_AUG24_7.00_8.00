@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .col:hover {
+        cursor: pointer;
+        scale: 1.2;
+        background-color: rgba(0, 255, 255, 0.222);
+        transition: 0.2s all;
+      }
+
+      .col:active {
+        scale: 0.9;
+      }
+    </style>
   </head>
   <body>
     <script>
@@ -23,12 +43,66 @@
       //   console.log(h1);
       //   console.log(body);
 
-      for (let i = 1; i <= 10; i++) {
-        const h1 = doc.createElement("h1");
-        h1.textContent = `Hello, world😀 ${i}!`;
+      // for (let i = 10; i <= 100; i++) {
+      //   const h1 = doc.createElement("h1");
+      //   h1.innerHTML = `<b>Hello</b>, world &#1285${i};`;
 
-        doc.body.appendChild(h1);
+      //   doc.body.appendChild(h1);
+      // }
+
+      let count = 12;
+
+      for (let i = 1; i <= 5; i++) {
+        const row = doc.createElement("section");
+        row.style.display = "flex";
+        for (let j = 1; j <= 5; j++) {
+          const col = doc.createElement("div");
+          col.style.margin = "2px";
+          col.style.border = "1px solid black";
+          col.style.padding = "10px";
+          col.className = "col";
+          col.innerHTML = `&#1285${++count};`;
+          row.appendChild(col);
+        }
+
+        doc.body.appendChild(row);
       }
     </script>
   </body>
 </html>
+
+<!-- <section style="display: flex">
+  <div>1</div>
+  <div>1</div>
+  <div>1</div>
+  <div>1</div>
+  <div>1</div>
+</section>
+<section style="display: flex">
+  <div>2</div>
+  <div>2</div>
+  <div>2</div>
+  <div>2</div>
+  <div>2</div>
+</section>
+<section style="display: flex">
+  <div>3</div>
+  <div>3</div>
+  <div>3</div>
+  <div>3</div>
+  <div>3</div>
+</section>
+<section style="display: flex">
+  <div>4</div>
+  <div>4</div>
+  <div>4</div>
+  <div>4</div>
+  <div>4</div>
+</section>
+<section style="display: flex">
+  <div>5</div>
+  <div>5</div>
+  <div>5</div>
+  <div>5</div>
+  <div>5</div>
+</section> -->
