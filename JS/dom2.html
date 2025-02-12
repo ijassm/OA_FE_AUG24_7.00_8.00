@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Document Object Model(DOM)</h1>
+    <h1 class="title">Document Object Model(DOM)</h1>
+    <h1 id="title">Document Object Model(DOM)</h1>
+    <h1 name="heading">Document Object Model(DOM)</h1>
+    <p onclick="change(this)">Hello 😀</p>
+    <script>
+      // ways to access document element
+      const doc = document;
+      //   const h1 = doc.getElementsByTagName("h1")[0];
+      //   h1.style.color = "red";
+      //   const h1 = doc.getElementsByClassName("title")[0];
+      //   h1.style.color = "red";
+      //   const h1 = doc.getElementById("title");
+      //   h1.style.color = "red";
+      //   const h1 = doc.getElementsByName("heading")[0];
+      //   h1.style.color = "red";
+      //   recommend
+      //   const h1 = doc.querySelector("h1");
+      //   const h1 = doc.querySelector(".title");
+      //   const h1 = doc.querySelector("h1.title");
+      //   const h1 = doc.querySelector("h1[name]");
+      //   const h1 = doc.querySelectorAll("body > h1");
+      //   h1.style.color = "red";
+
+      //   console.log(h1);
+
+      function change(e) {
+        const element = e;
+        element.textContent = "You clicked me😁";
+      }
+    </script>
+  </body>
+</html>
