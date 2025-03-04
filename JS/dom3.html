@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        font-family: "Poppins", system-ui;
+      }
+
+      body {
+        margin: 0%;
+      }
+
+      nav {
+        position: relative;
+        top: 0px;
+        background-color: aliceblue;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 10px;
+      }
+
+      .routes {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .login-btn {
+        background-color: crimson;
+        color: white;
+        padding: 5px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .navbar .logo {
+        max-width: 100px;
+      }
+
+      .routes {
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .routes *:hover {
+        color: darkred;
+      }
+
+      .menu {
+        display: none;
+        background-color: crimson;
+        color: white;
+        padding: 5px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .mob-navbar-hide {
+        top: -200px;
+      }
+
+      .mob-navbar {
+        transition: all 1s;
+        width: 100%;
+        background-color: aliceblue;
+        position: absolute;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+        max-height: 180px;
+      }
+
+      .max-width {
+        width: 95%;
+        max-width: 1200px;
+        margin-inline: auto;
+      }
+
+      .flex-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-block: 50px;
+      }
+
+      .flex-item {
+        flex-basis: calc(100% / 4 - 20px);
+      }
+
+      .content {
+        padding: 10px;
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .description {
+        font-size: 16px;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-block: 10px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.654);
+        color: white;
+      }
+
+      .btn:hover {
+        background-color: rgb(0, 0, 0);
+      }
+
+      @media (max-width: 900px) {
+        /* body {
+          background-color: aquamarine;
+        } */
+        .flex-item {
+          flex-basis: calc(100% / 2 - 20px);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .menu {
+          display: block;
+        }
+
+        .routes {
+          display: none;
+        }
+
+        .flex-item {
+          flex-basis: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <section class="navbar max-width">
+        <img
+          class="logo"
+          src="https://1000logos.net/wp-content/uploads/2018/02/BMW-Logo-1997.png"
+          alt="logo"
+        />
+        <div class="routes">
+          <span>Home</span>
+          <span>About us</span>
+          <span>Contant us</span>
+          <span class="login-btn">Login</span>
+        </div>
+        <div class="menu" onclick="toggleMenu()">Menu</div>
+      </section>
+      <section class="mob-navbar mob-navbar-hide">
+        <p>Home</p>
+        <p>About us</p>
+        <p>Contant us</p>
+        <p class="login-btn">Login</p>
+      </section>
+    </nav>
+    <main class="flex-container max-width"></main>
+    <script>
+      const doc = document;
+      const data = [
+        {
+          img: "https://images.unsplash.com/photo-1616400619175-5beda3a17896?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Study Lamp",
+          description:
+            "A bright and modern study lamp to illuminate your workspace with elegance and efficiency.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1558636815-1978d0419bff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Cozy Reading Corner",
+          description:
+            "A warm and inviting space designed for those who love to read in comfort.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1648469941040-b1c1fac2d4b2?q=80&w=2102&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Minimalist Workspace",
+          description:
+            "A clean and distraction-free environment to enhance your productivity.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1522199710521-72d69614c702",
+          title: "Creative Desk Setup",
+          description:
+            "A perfect blend of art and technology, making workspaces inspiring and functional.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Mountain View Study",
+          description:
+            "Enjoy breathtaking views while working from your dream setup.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1497366216548-37526070297c",
+          title: "Vintage Library",
+          description:
+            "A nostalgic collection of books and artifacts for the true bibliophile.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1690788210614-9052cffd8a14?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Night Study",
+          description:
+            "A peaceful late-night workspace for deep focus and creativity.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1596949469909-5217f8b68f23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Tech Haven",
+          description:
+            "A futuristic desk setup with the latest gadgets and ergonomic design.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1596949469909-5217f8b68f23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Tech Haven",
+          description:
+            "A futuristic desk setup with the latest gadgets and ergonomic design.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1596949469909-5217f8b68f23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Tech Haven",
+          description:
+            "A futuristic desk setup with the latest gadgets and ergonomic design.",
+        },
+        {
+          img: "https://plus.unsplash.com/premium_photo-1733259723636-d0df24b07bab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Cozy Home Office",
+          description:
+            "A perfect blend of work and home, making productivity feel effortless.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+          title: "Modern Study Room",
+          description:
+            "A sleek and stylish study space designed for efficiency and comfort.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1558250895-968950e71e6f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Zen Workspace",
+          description:
+            "A calming atmosphere with soft lighting and nature-inspired decor.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Industrial Office",
+          description:
+            "A rugged yet stylish workspace with industrial decor and modern aesthetics.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1654406632448-c7c868f57fed?q=80&w=2088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          title: "Nature-Inspired Office",
+          description:
+            "Bringing the outdoors inside for a refreshing and creative work environment.",
+        },
+        {
+          img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+          title: "Dark Mode Setup",
+          description:
+            "A sleek, dark-themed workspace for a professional and immersive experience.",
+        },
+      ];
+
+      function card(img, title, description) {
+        return `
+            <section class="flex-item">
+        <img
+          src="${img}"
+          alt="img"
+        />
+        <div class="content">
+          <p class="title">${title}</p>
+          <p class="description">
+           ${description}
+          </p>
+          <div class="btn">View</div>
+        </div>
+      </section>
+            `;
+      }
+
+      function render() {
+        const cardContainer = document.querySelector(".flex-container");
+        data.map(
+          (data) =>
+            (cardContainer.innerHTML += card(
+              data.img,
+              data.title,
+              data.description
+            ))
+        );
+      }
+
+      render();
+
+      function toggleMenu() {
+        const mobNavbar = document.querySelector(".mob-navbar");
+
+        mobNavbar.classList.toggle("mob-navbar-hide");
+
+        // console.log(mobNavbar);
+      }
+    </script>
+  </body>
+</html>
