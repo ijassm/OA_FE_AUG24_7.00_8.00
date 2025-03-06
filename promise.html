@@ -1,0 +1,36 @@
+l
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const willAttend = false;
+      const tommorrowClass = new Promise((resolve, reject) => {
+        if (willAttend) {
+          setTimeout(() => {
+            resolve("I will attend the class😀");
+          }, 2000);
+        } else {
+          setTimeout(() => {
+            reject("Sorry, i will not able to attend the class😁");
+          }, 2000);
+        }
+      });
+
+      console.log(tommorrowClass);
+
+      tommorrowClass.then(
+        (data) => {
+          console.log(data);
+        },
+        (data) => {
+          console.error(data);
+        }
+      );
+    </script>
+  </body>
+</html>
