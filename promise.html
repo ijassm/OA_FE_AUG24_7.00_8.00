@@ -8,7 +8,7 @@ l
   </head>
   <body>
     <script>
-      const willAttend = false;
+      const willAttend = true;
       const tommorrowClass = new Promise((resolve, reject) => {
         if (willAttend) {
           setTimeout(() => {
@@ -23,14 +23,37 @@ l
 
       console.log(tommorrowClass);
 
-      tommorrowClass.then(
-        (data) => {
+      // tommorrowClass.then(
+      //   (data) => {
+      //     console.log(data);
+      //   },
+      //   (data) => {
+      //     console.error(data);
+      //   }
+      // );
+
+      tommorrowClass
+        .then((data) => {
           console.log(data);
-        },
-        (data) => {
+          const isComplete = true;
+          return new Promise((resolve, reject) => {
+            if (isComplete) {
+              setTimeout(() => {
+                resolve("Going to complete JS😀");
+              }, 2000);
+            } else {
+              setTimeout(() => {
+                reject("Sorry, i will not able Going to complete JS😁");
+              }, 2000);
+            }
+          });
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((data) => {
           console.error(data);
-        }
-      );
+        });
     </script>
   </body>
 </html>
