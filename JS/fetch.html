@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const baseUrl = "https://jsonplaceholder.typicode.com";
+      const resources = "comments";
+
+      fetch(baseUrl + "/" + resources + "/", {
+        method: "POST",
+        body: { email: "xyz@gmail.com", name: "demo" },
+      })
+        .then((data) => data.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((e) => console.error("Error :", e));
+
+      //   fetch(baseUrl + "/" + resources + "/")
+      //     .then((data) => data.json())
+      //     .then((data) => console.log(data))
+      //     .catch((e) => console.error("Error :", e));
+
+      const API_KEY = "7d19698810f679b4ae3873ad49c3cc0b";
+      const LAT = "12.012335";
+      const LON = "79.857234";
+
+      fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${API_KEY}&units=metric`
+      )
+        .then((data) => data.json())
+        .then((data) => console.log(data))
+        .catch((e) => console.error("Error :", e));
+    </script>
+  </body>
+</html>
